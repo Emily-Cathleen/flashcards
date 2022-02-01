@@ -8,10 +8,14 @@ class Turn {
   returnGuess() {
     return this.guess;
   };
-  //
-  // returnCard() {
-  //   return this.currentCard;
-  // };
+
+  returnCard() {
+    return this.currentCard;
+  };
+
+  evaluateGuess() {
+
+  };
 
   };
 

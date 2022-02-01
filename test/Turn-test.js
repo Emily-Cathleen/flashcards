@@ -43,6 +43,18 @@ describe('Turn', () => {
     expect(returnGuess2).to.deep.equal('ball');
   });
 
-  
+  it('should return the player\'s card', () => {
+    const playerCard1 = turn1.returnCard();
+    const playerCard2 = turn2.returnCard();
+
+    expect(playerCard1).to.deep.equal(card1);
+    expect(playerCard2).to.deep.equal(card2);
+  });
+
+  it('should be able to evaluate player\'s guess against the correct answer', () => {
+    const correctAnswer = turn1.evaluateGuess();
+
+    expect(correctAnswer).to.deep.equal(true);
+  });
 
 })
