@@ -52,9 +52,9 @@ describe('Turn', () => {
   });
 
   it('should be able to evaluate player\'s guess against the correct answer', () => {
-    const correctAnswer = turn1.evaluateGuess();
+    const isCorrect = turn2.evaluateGuess();
 
-    expect(correctAnswer).to.deep.equal(true);
+    expect(isCorrect).to.deep.equal(true);
   });
 
 })

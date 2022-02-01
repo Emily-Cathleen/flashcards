@@ -14,10 +14,16 @@ class Turn {
   };
 
   evaluateGuess() {
-
+    if(this.guess === this.currentCard.correctAnswer) {
+      this.isCorrect = true;
+      return true;
+    } else {
+      return false;
+    }
   };
 
   };
+
 
 
 
