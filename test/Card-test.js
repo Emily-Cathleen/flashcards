@@ -20,8 +20,8 @@ describe('Card', () => {
     expect(card).to.be.an.instanceof(Card);
   });
 
-  it('should have a number', () => {
-    expect(card.number).to.equal(1);
+  it('should have an id', () => {
+    expect(card.id).to.equal(1);
   });
 
   it('should store a question', () => {
