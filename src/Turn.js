@@ -3,15 +3,17 @@ class Turn {
     this.guess = guess;
     this.currentCard = card;
   }
-};
 
-  // returnGuess() {
-  //   return this.guess;
-  // };
+
+  returnGuess() {
+    return this.guess;
+  };
   //
   // returnCard() {
   //   return this.currentCard;
   // };
+
+  };
 
 
 

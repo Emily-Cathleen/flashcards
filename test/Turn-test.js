@@ -25,9 +25,24 @@ describe('Turn', () => {
 
   });
 
-  it('should store a players guess', () => {
+  it('should store a player\'s guess', () => {
       expect(turn1.guess).to.deep.equal('apples');
       expect(turn2.guess).to.deep.equal('ball');
-  })
+  });
+
+  it('should store current card', () => {
+    expect(turn1.currentCard).to.deep.equal(card1);
+    expect(turn2.currentCard).to.deep.equal(card2);
+  });
+
+  it('should return the player\'s guess', () => {
+    const returnGuess1 = turn1.returnGuess();
+    const returnGuess2 = turn2.returnGuess();
+
+    expect(returnGuess1).to.deep.equal('apples');
+    expect(returnGuess2).to.deep.equal('ball');
+  });
+
+  
 
 })
