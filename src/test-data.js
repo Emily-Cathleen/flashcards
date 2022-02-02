@@ -1,4 +1,4 @@
-const testData = [
+export [
   {
   "id": 1,
   "question": "What is Henry\'s favorite foods?",
@@ -20,4 +20,5 @@ const testData = [
   "correctAnswer": "February"
 }];
 
-module.exports = {testData};
+// module.exports = {testData};
+//when i am exporting this, I am creating an object.

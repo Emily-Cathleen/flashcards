@@ -4,21 +4,19 @@ const expect = chai.expect;
 const Deck = require('../src/Deck');
 const Card = require('../src/Card');
 const Round = require('../src/Round');
-// const data = require('../src/test-data');
+const dog = require('../src/test-data');
 
 
 describe('Round', () => {
-  let card1;
-  let card2;
-  let card3;
+  let cards;
   let deck;
   let round;
 
 
   beforeEach(() => {
-    card1 = new Card(1, 'What is Henry\'s favorite foods?', ['chicken', 'peanutButter', 'apples'], 'chicken');
-    card2 = new Card(2, 'What are Henry\'s favorite toys?', ['ball', 'rope', 'frisbee'], 'ball');
-    card3 = new Card(3, 'What month was Henry born?', ['December', 'January', 'February'], 'February');
+    cards = dog.map(card => new Card(card.id, card.question, card.answers, card.correctAnswer));
+    // card2 = new Card(2, 'What are Henry\'s favorite toys?', ['ball', 'rope', 'frisbee'], 'ball');
+    // card3 = new Card(3, 'What month was Henry born?', ['December', 'January', 'February'], 'February');
     deck = new Deck([card1, card2, card3]);
     round = new Round(deck);
   });
@@ -35,8 +33,5 @@ describe('Round', () => {
   it('should keep track of turns, starting at 0', () => {
     expect(round.turn).to.equal(0);
   });
-
-  
-
 
 });
