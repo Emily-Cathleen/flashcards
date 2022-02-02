@@ -1,27 +1,23 @@
 const testData = [
   {
   "id": 1,
-  "question": 'What is Henry\'s favorite foods?',
+  "question": "What is Henry\'s favorite foods?",
   "answers": ['chicken', 'peanutButter', 'apples'],
-  "correctAnswer": 'chicken'
+  "correctAnswer": "chicken"
 },
 
 {
   "id": 2,
-  "question": 'What are Henry\'s favorite toys?',
+  "question": "What are Henry\'s favorite toys?",
   "answers": ['ball', 'rope', 'frisbee'],
-  "correctAnswer": 'ball'
+  "correctAnswer": "ball"
 },
 
 {
   "id": 3,
-  "question": 'What month was Henry born?',
+  "question": "What month was Henry born?",
   "answers": ['December', 'January', 'February'],
-  "correctAnswer": 'February'
-}
+  "correctAnswer": "February"
+}];
 
-];
-
-module.exports = {
-  testData
-};
+module.exports = {testData};
