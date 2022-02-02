@@ -32,6 +32,11 @@ describe('Round', () => {
     expect(round.returnCurrentCard()).to.deep.equal(card1);
   });
 
+  it('should keep track of turns, starting at 0', () => {
+    expect(round.turn).to.equal(0);
+  });
+
+  
 
 
 });
