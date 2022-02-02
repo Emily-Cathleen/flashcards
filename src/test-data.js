@@ -15,7 +15,7 @@ const testData = [
 
 {
   "id": 3,
-  "question": 'What month was Henry born?'',
+  "question": 'What month was Henry born?',
   "answers": ['December', 'January', 'February'],
   "correctAnswer": 'February'
 }
