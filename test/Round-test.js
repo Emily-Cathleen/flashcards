@@ -49,10 +49,18 @@ describe('Round', () => {
     expect(round.turn).to.equal(2)
   });
 
-  it('should create a new instance of Turn after each guess', () => {
-    let turn1 = new Turn('chicken', card1);
-    round.takeTurn(turn1);
-    expect(round.takeTurn()).to.equal(turn1);
+  // it('should create a new instance of Turn after each guess', () => {
+  //   let turn1 = new Turn('chicken', card1);
+  //   round.takeTurn(turn1);
+  //   expect(round.takeTurn()).to.equal(turn1);
+  // });
+
+  it('should replace the current card with the next card', () => {
+    round.takeTurn('chicken');
+    expect(round.returnCurrentCard()).to.equal(card1);
+
+    round.takeTurn('ball');
+    expect(round.returnCurrentCard()).to.equal(card2);
   });
 
 

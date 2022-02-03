@@ -16,7 +16,7 @@ class Round {
   };
 
   takeTurn(guess) {
-    let newTurn = new Turn(guess, currentCard)
+    let newTurn = new Turn(guess, this.returnCurrentCard())
     this.turn++;
     return newTurn
   };
