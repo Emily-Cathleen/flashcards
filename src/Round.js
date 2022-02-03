@@ -18,6 +18,10 @@ class Round {
   takeTurn(guess) {
     let newTurn = new Turn(guess, this.returnCurrentCard())
     this.turn++;
+    let frontCard = this.deck.shift();
+    this.deck.push(frontCard);
+
+
     return newTurn
   };
 

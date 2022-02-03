@@ -57,11 +57,24 @@ describe('Round', () => {
 
   it('should replace the current card with the next card', () => {
     round.takeTurn('chicken');
-    expect(round.returnCurrentCard()).to.equal(card1);
+    expect(round.returnCurrentCard()).to.equal(card2);
+
+    //this is not card1, bc once we invoke takeTurn, it will swicth to card2
 
     round.takeTurn('ball');
-    expect(round.returnCurrentCard()).to.equal(card2);
+    expect(round.returnCurrentCard()).to.equal(card3);
   });
+
+
+  it('should keep track of incorrect guesses', () => {
+    round.takeTurn('apple');
+    round.takeTurn('ANYTHING');
+    expect(round.incorrectGuesses.length).to.equal(2);
+  });
+
+
+
+
 
 
 
