@@ -21,13 +21,22 @@ class Round {
     let frontCard = this.deck.shift();
     this.deck.push(frontCard);
 
+    if (newTurn.giveFeedback() === 'incorrect!') {
+      this.incorrectGuesses.push(newTurn)
+    }
 
     return newTurn
   };
 
-  // takeTurn() {
-  //
-  // };
+  calculatePercentCorrect() {
+    let correctAnswers = this.turn - this.incorrectGuesses.length;
+    let percentCorrect = ((correctAnswers % this.turn) * 100).toFixed(2)
+
+    return percentCorrect;
+};
+
+
+
 
 
 };

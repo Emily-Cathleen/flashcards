@@ -49,12 +49,6 @@ describe('Round', () => {
     expect(round.turn).to.equal(2)
   });
 
-  // it('should create a new instance of Turn after each guess', () => {
-  //   let turn1 = new Turn('chicken', card1);
-  //   round.takeTurn(turn1);
-  //   expect(round.takeTurn()).to.equal(turn1);
-  // });
-
   it('should replace the current card with the next card', () => {
     round.takeTurn('chicken');
     expect(round.returnCurrentCard()).to.equal(card2);
@@ -70,6 +64,15 @@ describe('Round', () => {
     round.takeTurn('apple');
     round.takeTurn('ANYTHING');
     expect(round.incorrectGuesses.length).to.equal(2);
+  });
+
+  it('should calculate the percentage of correct guesses', () => {
+    round.takeTurn('apple');
+    round.takeTurn('ball');
+    round.takeTurn('February');
+    // round.calculatePercentCorrect();
+
+    expect(round.calculatePercentCorrect()).to.equal(66.67)
   });
 
 
